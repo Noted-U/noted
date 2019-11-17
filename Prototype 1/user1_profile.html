@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <!-- Part of this code is from w3school. -->
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="home.html">Noted.</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, user1
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="user1_profile.html">Profile</a></li>
+                  <li><a href="#">Setting</a></li>
+                </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" action="/action_page.php">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" role="Submit Search">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <body>
+      <div class="container">
+        <h2>User Profile</h2>
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="user1_profile">Profile</a></li>
+          <li><a data-toggle="tab" href="#friends">Friends</a></li>
+          <li><a data-toggle="tab" href="#setting">Setting</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3> </h3>
+            <div class="media">
+              <div class="media-left">
+                <img src="John_Doe.png" class="media-object" style="width:200px">
+              </div>
+              <div class="media-body">
+                <h2 class="media-heading">John Doe</h2>
+                <p>Senior student studying CS</p>
+              </div>
+            </div>
+          </div>
+          <div id="friends" class="tab-pane fade">
+            <h3>Friends</h3>
+            <ol>
+              <li><a href="user2_profile.html">User2</a></li>
+              <li><a href="#">User3</a></li>
+            </ol>
+          </div>
+          <div id="setting" class="tab-pane fade">
+            <h3>Setting</h3>
+            <p>To be continued.</p>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
