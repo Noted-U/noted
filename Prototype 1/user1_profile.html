@@ -44,42 +44,127 @@
 
     <body>
       <div class="container-fluid">
-        <div class="row content">
+        <div class="row">
           <div class="col-sm-3 sidenav">
             <h2>User Profile</h2>
             <ul class="nav nav-pills nav-stacked">
               <li class="active"><a data-toggle="tab" href="#user1_profile">Profile</a></li>
               <li><a data-toggle="tab" href="#friends">Friends</a></li>
+              <li><a data-toggle="tab" href="#messages">Messages</a></li>
               <li><a data-toggle="tab" href="#setting">Setting</a></li>
             </ul><br>
           </div>
 
           <div class="col-sm-9">
             <div class="tab-content">
-              <hr></hr>
+              <hr>
               <div id="user1_profile" class="tab-pane fade in active">
                 <div class="media">
-                  <div class="media-left">
-                    <img src="John_Doe.png" class="media-object" style="width:200px">
-                  </div>
                   <div class="media-body">
                     <h2 class="media-heading">John Doe</h2>
-                    <p>Senior student studying CS</p>
+                    <emhr></emhr>
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <p>user1@gmail.com</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Sex</label>
+                        <p>Male</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">School Year</label>
+                        <p>Senior</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect2">Major</label>
+                        <p>Computer Science</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">About Me</label>
+                        <p>Senior student studying CS</p>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="media-left">
+                    <img src="John_Doe.png" class="media-object" style="width:200px">
                   </div>
                 </div>
               </div>
 
               <div id="friends" class="tab-pane fade">
                 <h3>Friends</h3>
-                <ol>
-                  <li><a href="user2_profile.html">User2</a></li>
-                  <li><a href="user3_profile.html">User3</a></li>
-                </ol>
+                <ul class="list-group list-group-flush">
+                  <li type="button" class="list-group-item list-group-item-action">
+                    <a href="user2_profile.html">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="male_avatar.png" class="media-object" alt="User2 Profile" style="width:64px">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">User2 Name</h4>
+                          <p>User2 About Me</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li type="button" class="list-group-item list-group-item-action">
+                    <a href="user3_profile.html">
+                      <div class="media">
+                        <div class="media-left">
+                          <img src="female_avatar.png" class="media-object" alt="User3 Profile" style="width:64px">
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">User3 Name</h4>
+                          <p>User3 About Me</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+              </div>
+
+              <div id="messages" class="tab-pane fade">
+                <h3>Friends</h3>
+                <ul class="list-group list-group-flush">
+                  <li type="button" class="list-group-item list-group-item-action"><a href="user2_profile.html">User2</a></li>
+                  <li type="button" class="list-group-item list-group-item-action"><a href="user3_profile.html">User3</a></li>
+                </ul>
               </div>
 
               <div id="setting" class="tab-pane fade">
                 <h3>Setting</h3>
-                <p>To be continued.</p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="user1@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Sex</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Choose not to reply</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">School Year</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Freshmen</option>
+                      <option>Sophomore</option>
+                      <option>Junior</option>
+                      <option>Senior</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect2">Major</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">About Me</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </form>
               </div>
           </div>
         </div>
