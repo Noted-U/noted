@@ -1,0 +1,22 @@
+.textdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+textarea{ 
+   /* width: 600px; */
+   height:600px;
+/* how to format display flex style */
+} 
+
+#header{
+    font-size: 20px;
+}
+
+#topic{
+    font-size: 15px;
+    font-style: italic;
+}
