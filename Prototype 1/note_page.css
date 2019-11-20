@@ -1,0 +1,35 @@
+#notetitle{
+    width: 145px;
+    margin-bottom: 10px;
+}
+.textdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+textarea{ 
+   /* width: 600px; */
+   height:600px;
+/* how to format display flex style */
+} 
+
+#header{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#topic{
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+#points{
+    font-size: 15px;
+    margin-top: 8px;
+}
+
