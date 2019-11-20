@@ -1,3 +1,7 @@
+#notetitle{
+    width: 145px;
+    margin-bottom: 10px;
+}
 .textdiv{
     display: flex;
     flex-direction: column;
@@ -14,9 +18,18 @@ textarea{
 
 #header{
     font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #topic{
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
+    margin-top: 8px;
 }
+
+#points{
+    font-size: 15px;
+    margin-top: 8px;
+}
+
