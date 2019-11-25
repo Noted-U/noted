@@ -11,51 +11,50 @@
         <link rel="stylesheet" type="text/css" href="note_page.css"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
-        
     </head>
+
     <body>
     <!-- navigation bar -->
-        <header>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                <div class="navbar-header">
-                    <b class="navbar-brand" id="logo">Noted.</b>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <b class="navbar-brand" id="logo">Noted.</b>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="notebooks.html">My Notebooks</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, John
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="user1_profile.html">Profile</a></li>
+                      <li><a href="index.html">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit" role="Submit Search">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="notebooks.html">My Notebooks</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, John
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="user1_profile.html">Profile</a></li>
-                          <li><a href="#">Setting</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" action="/action_page.php">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
-                    <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit" role="Submit Search">
-                        <i class="glyphicon glyphicon-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                </div>
-            </nav>
-        </header>
+              </div>
+            </form>
+            </div>
+        </nav>
+    </header>
 
         <div class="well">
             <input class="form-control" id="notetitle" placeholder="Title">
 
             <a href= "home.html" class= "btn btn-default" role="send to template selection page">Standard Template </a>
             <!-- LINK NEEDS TO BE ADJUSTED TO TEMPLATE SELECTION SCREEN -->
-            
-        </div>
 
+        </div>
 
       <div id="summernote"><p>
         <div id="header">
