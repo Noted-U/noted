@@ -140,22 +140,22 @@
                 </ul>
               </div>
 
-              <div id="setting" class="tab-pane fade">
+              <div id="setting" class="tab-pane fade" aria-label="settings">
                 <h3>Setting</h3>
                 <form>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="name">
                     <label for="control_form">Name</label>
                     <input class="form-control" id="user_name_input" placeholder="John Doe">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="email">
                     <label for="control_form">Email address</label>
                     <input type="email" class="form-control" id="user_email_input" aria-describedby="emailHelp" placeholder="user1@gmail.com" required autofocus>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="phonenumber">
                     <label for="control_form">Phone</label>
-                    <input type="text" pattern="\d*" maxlength="10" onKeyPress="if(this.value.length==10) return false;" class="form-control" id="user_phone_input" placeholder="1234567890">
+                    <input type="number" required minlength="10" maxlength="10" class="form-control" id="user_phone_input" placeholder="1234567890">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="sex">
                     <label for="control_form">Sex</label>
                     <select class="form-control" id="user_sex_input">
                       <option>Male</option>
@@ -163,7 +163,7 @@
                       <option>Choose not to reply</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="year">
                     <label for="control_form">School Year</label>
                     <select class="form-control" id="user_schoolyear_input">
                       <option>Freshmen</option>
@@ -172,19 +172,23 @@
                       <option>Senior</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="major">
                     <label for="control_form">Major</label>
                     <textarea class="form-control" id="user_major_input" rows="1"></textarea>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" aria-label="aboutme">
                     <label for="control_form">About Me</label>
                     <textarea class="form-control" id="user_aboutme_input" rows="2"></textarea>
                   </div>
                 </form>
-                <button class="btn btn-default" id="submitButton">Update my profile!
-                  <!-- <a href="user1_profile.html"></a> -->
+<!--                 <button class="popup" onclick="myFunction()" id="submitButton" type="submit" role="updateprofile"> Update my profile! 
+                  <span class="popuptext" id="myPopup">Updates Recorded!</span>
                 </button>
-              </div>
+ -->
+                <button class="popup" onclick="myFunction()" aria-label="submitbutton"> Update my profile! 
+                  <span class="popuptext" id="myPopup">Updates Recorded!</span>
+                </button>
+
           </div>
         </div>
       </div>
