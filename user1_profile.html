@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>My Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="user_profile.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="user_profile.css">
     <link rel="stylesheet" href="home.css">
+    <script src="user_profile.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
@@ -71,6 +71,10 @@
                       <div class="form-group">
                         <label for="control_form">Email address</label>
                         <p id = "user_email">user1@gmail.com</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="control_form">Phone</label>
+                        <p id = "user_phone">1234567890</p>
                       </div>
                       <div class="form-group">
                         <label for="control_form">Sex</label>
@@ -177,9 +181,10 @@
                     <textarea class="form-control" id="user_aboutme_input" rows="2"></textarea>
                   </div>
                 </form>
-                <button class="btn btn-default" id="update_profile">Update my profile!
+                <!-- <button class="btn btn-default" id="update_profile">Update my profile!
                   <a href="user1_profile.html"></a>
-                </button>
+                </button> -->
+                <input type="submit" value="Submit" id="submitButton"></input>
               </div>
           </div>
         </div>
