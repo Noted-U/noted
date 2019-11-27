@@ -48,6 +48,7 @@
         </nav>
     </header>
 
+    <div class="container">
         <div class="well">
             <input class="form-control" id="notetitle" placeholder="Title">
 
@@ -59,10 +60,10 @@
       <div id="summernote"><p>
         <div id="header">
             Lecture Title
-        </div> 
+        </div>
 
         <div id="topic">Topic Title</div>
-        
+
         <div id="points">
           <ul>
             <li>Point 1</li>
@@ -103,5 +104,84 @@
         <!-- <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script> -->
 
 
+        <div class="page-header">
+            <h3 class="reviews">Leave your comment</h3>
+        </div>
+        <div class="comment-tabs">
+          <ul class="nav nav-tabs" role="tablist">
+              <li class="active"><a href="#view-comment" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Comments</h4></a></li>
+              <li><a href="#add-comment" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Add comment</h4></a></li>
+          </ul>
+          <div class="tab-content">
+              <div class="tab-pane active" id="view-comment">
+                  <ul class="media-list">
+                    <emhr></emhr>
+                    <li class="media">
+                      <a class="pull-left" href="user3_profile.html">
+                        <img class="media-object img-circle" src="female_avatar.png" height=120px alt="profile">
+                      </a>
+                      <div class="media-body">
+                        <div class="well well-lg">
+                            <h4 class="media-heading text-uppercase reviews">Lily</h4>
+                            <p class="media-comment">
+                              Great snippet! Thanks for sharing.
+                            </p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="media">
+                      <a class="pull-left" href="user2_profile.html">
+                        <img class="media-object img-circle" src="male_avatar.png" height=120px alt="profile">
+                      </a>
+                      <div class="media-body">
+                        <div class="well well-lg">
+                            <h4 class="media-heading text-uppercase reviews">Marcelo</h4>
+                            <p class="media-comment">
+                              I'm looking for that. Thanks!
+                            </p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="media">
+                      <a class="pull-left" href="user3_profile.html">
+                        <img class="media-object img-circle" src="John_Doe.png" height=120px alt="profile">
+                      </a>
+                      <div class="media-body">
+                        <div class="well well-lg">
+                            <h4 class="media-heading text-uppercase reviews">John</h4>
+                            <p class="media-comment" id="new-comment">
+                              <div id="example" style="margin: 5px 0pt; padding: 5px;"></div>
+                              <form>
+                                  <div><textarea class="example-default-value" id="example-textarea" style="width: 400px; height: 50px;">Type your comment to the Note</textarea></div>
+                                  <div><input type="button" value="Submit" onclick="example_append()" /></div>
+                              </form>
+                              <script language="javascript">
+                              $('.example-default-value').each(function() {
+                                  var default_value = this.value;
+                                  $(this).focus(function() {
+                                      if(this.value == default_value) {
+                                          this.value = '';
+                                      }
+                                  });
+                                  $(this).blur(function() {
+                                      if(this.value == '') {
+                                          this.value = default_value;
+                                      }
+                                  });
+                              });
+                              function example_append() {
+                                  $('#example').append($('#example-textarea').val());
+                              }
+                              </script>
+                            </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
     </body>
 </html>

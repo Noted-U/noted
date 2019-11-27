@@ -145,7 +145,11 @@
                   </div>
                   <div class="form-group">
                     <label for="control_form">Email address</label>
-                    <input type="email" class="form-control" id="user_email_input" placeholder="user1@gmail.com">
+                    <input type="email" class="form-control" id="user_email_input" aria-describedby="emailHelp" placeholder="user1@gmail.com" required autofocus>
+                  </div>
+                  <div class="form-group">
+                    <label for="control_form">Phone</label>
+                    <input type="text" pattern="\d*" maxlength="10" onKeyPress="if(this.value.length==10) return false;" class="form-control" id="user_phone_input" placeholder="1234567890">
                   </div>
                   <div class="form-group">
                     <label for="control_form">Sex</label>
@@ -173,7 +177,9 @@
                     <textarea class="form-control" id="user_aboutme_input" rows="2"></textarea>
                   </div>
                 </form>
-                <button id="update_profile" onclick="update_profile()" type="submit" class="btn btn-default">Update my profile!</button>
+                <button class="btn btn-default" id="update_profile">Update my profile!
+                  <a href="user1_profile.html"></a>
+                </button>
               </div>
           </div>
         </div>
