@@ -1,6 +1,7 @@
 #notetitle{
     width: 145px;
     margin-bottom: 10px;
+    margin-left: 14px;
 }
 
 #header{
@@ -8,6 +9,7 @@
     font-weight: bold;
     text-decoration: underline;
 }
+
 
 #table_title{
     margin-top: 10px;
