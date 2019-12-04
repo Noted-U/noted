@@ -48,11 +48,50 @@
   <h2>NEUROSCI 206: Systems and Behavioral Neuroscience</h2>
   <input class="form-control" id="myInput" type="text" placeholder="Search for file type, title, or date created...">
   <br>
-    <div class="container">
-      <a href="note_page.html"><button type="button" class="btn btn-primary btn-block" aria-label="addnotepage">+ Add a new notepage</button></a>
-      <button type="button" class="btn btn-default btn-block" aria-label="addstudytool">+ Add a new study tool</button>
-  </div>
+    <div class="container" class="addbutton">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal">+ Add a new notepage</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Your Note Template</h4>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="btn btn-outline-info">Standard Template</button>
+              <button type="button" class="btn btn-outline-info">Table Template</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal">+ Add a new study tool</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Your Study Tool</h4>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="btn btn-outline-info">Flashcards</button>
+              <button type="button" class="btn btn-outline-info">Timeline</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
   <br>
+  <br>
+  <input class="form-control" id="myInput" type="text" placeholder="Search for file type, title, or date created...">
   <table class="table table-bordered table-striped" aria-label="tableofnotes">
     <thead>
       <tr>
