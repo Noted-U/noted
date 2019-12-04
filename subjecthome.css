@@ -3,6 +3,6 @@
 }
 
 .addbutton {
-	display:inline-block; 
+	display: flex;
 	font-size: 12pt;
 }

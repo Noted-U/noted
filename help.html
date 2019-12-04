@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <title>My Notebooks</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
-<body>
-    <!-- navigation bar -->
+
+<!-- Part of this code is from w3school. -->
+
+  <body>
     <header>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -17,9 +20,9 @@
                 <b class="navbar-brand" id="logo">Noted.</b>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="home.html">Home</a></li>
-                <li class="active"><a href="notebooks.html">My Notebooks</a></li>
-                <li><a href="help.html">Help</a></li>
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="notebooks.html">My Notebooks</a></li>
+                <li><a href="#">Help</a></li>
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, John
                     <span class="caret"></span></a>
@@ -43,54 +46,9 @@
         </nav>
     </header>
 
-<div class="container" aria-label="mynotebooks">
-  <h2>My Notebooks</h2>
-  <input class="form-control" id="myInput" type="text" placeholder="Search for subject, term, or date created">
-  <br>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>Subject</th>
-        <th>Term</th>
-        <th>Date Created</th>
-      </tr>
-    </thead>
-    <tbody id="myTable" aria-label="tableofnotebooks">
-      <tr>
-        <td><a href="subjecthome.html">NEUROSCI 206: Systems and Behavioral Neuroscience</a></td>
-        <td>Fall 2019</td>
-        <td>9/29/2019</td>
-      </tr>
-      <tr>
-        <td>COMP_SCI 330: Human Computer Interaction</td>
-        <td>Fall 2019</td>
-        <td>9/27/2019</td>
-      </tr>
-      <tr>
-        <td>NEUROSCI 304: Developmental Neurobiology</td>
-        <td>Spring 2019</td>
-        <td>4/1/2019</td>
-      </tr>
-      <tr>
-        <td>LING 221: Language and Prejudice</td>
-        <td>Spring 2019</td>
-        <td>3/29/2019</td>
-      </tr>
-    </tbody>
-  </table>
-
-</div>
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-
-</body>
-</html>
+    <div class="text-center">
+      <div class="jumbotron">
+        <h1>Welcome to Noted.</h1>
+        <p>Page under construction☺️</p>
+      </div>
+    </div>

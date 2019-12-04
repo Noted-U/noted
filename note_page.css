@@ -1,6 +1,7 @@
 #notetitle{
     width: 145px;
     margin-bottom: 10px;
+    margin-left: 14px;
 }
 .textdiv{
     display: flex;
@@ -32,4 +33,6 @@ textarea{
     font-size: 15px;
     margin-top: 8px;
 }
+
+
 
