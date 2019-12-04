@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="flashcard.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="note_page.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+    </head>
+
+    <body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <b class="navbar-brand" id="logo">Noted.</b>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="notebooks.html">My Notebooks</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, John
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="user1_profile.html">Profile</a></li>
+                      <li><a href="index.html">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit" role="Submit Search">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="col-sm-6">
+        <h2>Neuroanatomy</h2>
+        <div class="well">
+
+            <a href= "home.html" class= "btn btn-default" role="send to template selection page">Standard Template </a>
+            <!-- LINK NEEDS TO BE ADJUSTED TO TEMPLATE SELECTION SCREEN -->
+
+        </div>
+
+        <div id="summernote"><p>
+          <div id="header">
+              Neuroanatomy
+          </div>
+
+          <div id="topic">Planes of section</div>
+
+          <div id="points">
+            <ul>
+              <li>Sagittal cut</li>
+                <ul>
+                  <li>Median cut dividing two hemispheres (left & right)</li>
+                  <li>Midsagittal</li>
+                  <li>Parasagittal</li>
+                </ul>
+              <li>Frontal cut</li>
+                <ul>
+                  <li>Coronal cut dividing anterior and posterior parts at plane of the face</li>
+                </ul>
+              <li>Transverse/Axial/Horizontal cut</li>
+                <ul>
+                  <li>Longitudinal axis: parallel to the rostral-caudal axis of the brainstem and spinal cord (vertical)</li>
+                  <li>Transverse axis: perpendicular to the RC axis</li>
+                </ul>
+              <li>Oblique cut</li>
+                <ul>
+                  <li>NONE of the three planes above</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+        <script>
+          $(document).ready(function() {
+              $('#summernote').summernote();
+          });
+        </script>
+
+        <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit</button>
+        <button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button>
+
+        <script>
+          var edit = function() {
+            $('#summernote').summernote({focus: true});
+          };
+
+          var save = function() {
+            var markup = $('#summernote').summernote('code');
+            $('#summernote').summernote('destroy');
+          };
+        </script>
+
+    </div>
+
+    <div class="col-sm-6">
+      <h2>Flashcards</h2>
+      <div class="well">
+          <input class="form-control" id="addflashcard_a" placeholder="Add side A of flashcard">
+          <input class="form-control" id="addflashcard_b" placeholder="Add side B of flashcard">
+          <emhr></emhr>
+          <button id="add" class="btn btn-primary" onclick="add()" type="button">Add</button>
+      </div>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1 class="card-title id="card1_a">Sagittal cut</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card-back" id="card1_b">
+                  <h1>Median cut dividing two hemispheres (left & right)</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1 class="card-title" id="card2_a">Frontal cut</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card-back" id="card2_b">
+                  <h1>Coronal cut dividing anterior and posterior parts at plane of the face</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="card">
+                    <div class="card-body">
+                      <h1 class="card-title" id="card3_a">Transverse/Axial/Horizontal cut</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="flip-card-back" id="card3_b">
+                  <h1>Coronal cut perpendicular to the roastral-caudal axis</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <script>
+        var newCard_a = document.getElementById('addflashcard_a'),
+            newCard_b = document.getElementById('addflashcard_b');
+        var add = function() {
+          $('#card1_a').innerHTML = newCard_a.value;
+          $('#card1_b').innerHTML = newCard_b.value;
+        };
+      </script>
+    </div>
+  </body>
