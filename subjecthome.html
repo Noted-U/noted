@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="subjecthome.js"></script>
 </head>
 <body>
     <!-- navigation bar -->
@@ -45,13 +46,12 @@
     </header>
 
 <div class="container" aria-label="currentnotebook">
-  <h2>ASIAN_AM 216: Global Asians</h2>
-  <br>
+  <h2>NEUROSCI 206: Systems and Behavioral Neuroscience</h2>
     <div class="container" class="addbutton">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal">+ Add a new notepage</button>
+      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal1">+ Add a new notepage</button>
       <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="myModal1" role="dialog">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
@@ -59,8 +59,8 @@
               <h4 class="modal-title">Select Your Note Template</h4>
             </div>
             <div class="modal-body">
-              <button type="button" class="btn btn-outline-info">Standard Template</button>
-              <button type="button" class="btn btn-outline-info">Table Template</button>
+              <a href="note_page.html" class="btn btn btn-primary btn-block">Standard Template</a>
+              <a href="note_page.html" class="btn btn btn-primary btn-block">Table Template</a>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -69,9 +69,9 @@
         </div>
     </div>
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal">+ Add a new study tool</button>
+      <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal2">+ Add a new study tool</button>
       <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
@@ -102,22 +102,22 @@
     <tbody id="myTable">
       <tr>
         <td>Lecture Notes</td>
-        <td>Lecture 1: Introduction to Asian Diasporas</td>
+        <td>Lecture 1: Introduction to Neuroscience</td>
         <td>9/29/2019</td>
       </tr>
       <tr>
         <td>Lecture Notes</td>
-        <td>Lecture 2: Labor Migration</td>
+        <td>Lecture 2: Anterolateral System</td>
         <td>9/29/2019</td>
       </tr>
       <tr>
         <td>Flashcards</td>
-        <td>Quiz #1: General Vocabulary</td>
+        <td><a href="flashcard.html">Quiz #1: Neuroanatomy terms</a></td>
         <td>10/1/2019</td>
       </tr>
       <tr>
         <td>Lecture Notes</td>
-        <td>Lecture 3: Philipino Migration to the Middle East</td>
+        <td>Lecture 3: Proprioceptive System</td>
         <td>10/3/2019</td>
       </tr>
     </tbody>
