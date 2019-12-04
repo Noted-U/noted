@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="table_template.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+    </head>
+
+    <body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <b class="navbar-brand" id="logo">Noted.</b>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="notebooks.html">My Notebooks</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hello, John
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="user1_profile.html">Profile</a></li>
+                      <li><a href="index.html">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit" role="Submit Search">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="well">
+            <input class="form-control" id="notetitle" placeholder="Title">
+
+            <a href= "home.html" class= "btn btn-default" role="send to template selection page">Table Template </a>
+            <!-- LINK NEEDS TO BE ADJUSTED TO TEMPLATE SELECTION SCREEN -->
+
+        </div>
+
+      <div id="summernote"><p>
+        <div id="header">
+            Lecture Title
+        </div>
+
+        <div id="table_title">
+            Table Title
+        </div>
+
+        <table style="width:100%">
+        <tr>
+            <th>Category 1</th>
+            <th>Category 2</th> 
+        </tr>
+        <tr>
+            <td><div class= "column_info_prompt">input category 1 data in this column...</div></td>
+            <td><div class= "column_info_prompt">input category 2 data in this column...</div></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        </table>
+    </p></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
+
+<button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit</button>
+<button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button>
+
+<script>
+    var edit = function() {
+      $('#summernote').summernote({focus: true});
+    };
+
+    var save = function() {
+      var markup = $('#summernote').summernote('code');
+      $('#summernote').summernote('destroy');
+    };
+  </script>
