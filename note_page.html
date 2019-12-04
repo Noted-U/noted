@@ -95,6 +95,20 @@
         });
       </script>
 
+      <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit</button>
+      <button id="save" class="btn btn-primary" onclick="save()" type="button">Save</button>
+
+      <script>
+        var edit = function() {
+          $('#summernote').summernote({focus: true});
+        };
+
+        var save = function() {
+          var markup = $('#summernote').summernote('code');
+          $('#summernote').summernote('destroy');
+        };
+      </script>
+
 
 
 
