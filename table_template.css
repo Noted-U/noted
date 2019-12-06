@@ -32,3 +32,8 @@ th, td{
 .column_info_prompt{
     color: grey;
 }
+
+#addbutton {
+    padding-left: 1000px;
+    float: right;
+}

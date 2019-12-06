@@ -46,7 +46,40 @@
 
 <div class="container" aria-label="currentnotebook">
   <h2>NEUROSCI 206: Systems and Behavioral Neuroscience</h2>
-    <div class="container" class="addbutton">
+  <input class="form-control" id="myInput" type="text" placeholder="Search for file type, title, or date created...">
+  <table class="table table-bordered table-striped" aria-label="tableofnotes">
+    <thead>
+      <tr>
+        <th>File Type</th>
+        <th>Title</th>
+        <th>Date Created</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Lecture Notes</td>
+        <td><a href="lecture1.html">Lecture 1: Introduction to Neuroscience</a></td>
+        <td>9/29/2019</td>
+      </tr>
+      <tr>
+        <td>Lecture Notes</td>
+        <td><a href="lecture2.html">Lecture 2: Anatomical Terminology</a></td>
+        <td>10/1/2019</td>
+      </tr>
+      <tr>
+        <td>Flashcards</td>
+        <td><a href="flashcard.html">Quiz #1: Neuroanatomy terms</a></td>
+        <td>10/1/2019</td>
+      </tr>
+      <tr>
+        <td>Lecture Notes</td>
+        <td>Lecture 3: Proprioceptive System</td>
+        <td>10/3/2019</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <div class="container" id="addbutton">
       <!-- Trigger the modal with a button -->
       <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#myModal1">+ Add a new notepage</button>
       <!-- Modal -->
@@ -86,40 +119,8 @@
           </div>
         </div>
       </div>
-  <br>
-  <br>
-  <input class="form-control" id="myInput" type="text" placeholder="Search for file type, title, or date created...">
-  <table class="table table-bordered table-striped" aria-label="tableofnotes">
-    <thead>
-      <tr>
-        <th>File Type</th>
-        <th>Title</th>
-        <th>Date Created</th>
-      </tr>
-    </thead>
-    <tbody id="myTable">
-      <tr>
-        <td>Lecture Notes</td>
-        <td><a href="lecture1.html">Lecture 1: Introduction to Neuroscience</a></td>
-        <td>9/29/2019</td>
-      </tr>
-      <tr>
-        <td>Lecture Notes</td>
-        <td><a href="lecture2.html">Lecture 2: Anatomical Terminology</a></td>
-        <td>10/1/2019</td>
-      </tr>
-      <tr>
-        <td>Flashcards</td>
-        <td><a href="flashcard.html">Quiz #1: Neuroanatomy terms</a></td>
-        <td>10/1/2019</td>
-      </tr>
-      <tr>
-        <td>Lecture Notes</td>
-        <td>Lecture 3: Proprioceptive System</td>
-        <td>10/3/2019</td>
-      </tr>
-    </tbody>
-  </table>
+    </div>
+
 </div>
 
 <script>

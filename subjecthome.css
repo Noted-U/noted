@@ -2,7 +2,7 @@
 	color: white; 
 }
 
-.addbutton {
-	display: flex;
+#addbutton {
+	padding-left: 375px;
 	font-size: 12pt;
 }
