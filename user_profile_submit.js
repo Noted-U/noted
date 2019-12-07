@@ -5,6 +5,9 @@ window.onload = function(){
   var newEmail = document.getElementById('user_email_input'),
       originalEmail = document.getElementById('user_email');
 
+  var newPhone = document.getElementById('user_phone_input'),
+      originalPhone = document.getElementById('user_phone');
+
   var newSex = document.getElementById('user_sex_input'),
       originalSex = document.getElementById('user_sex');
 
@@ -17,24 +20,13 @@ window.onload = function(){
   var newAboutMe = document.getElementById('user_aboutme_input'),
       originalAboutMe = document.getElementById('user_aboutme');
 
-  var newFavorite = document.getElementById('user_favtemplate_input'),
-      originalFavorite = document.getElementById('user_favtemplate');
-
   var submit = document.getElementById("submitbutton");
 
   submit.onclick = function(e){
-    if (newName.value != ""){
-      replaceName(newName.value);
-    }
-    if (newEmail.value != ""){
-      replaceEmail(newEmail.value);
-    }
-    if (newMajor.value != ""){
-      replaceMajor(newMajor.value);
-    }
-    if (newAboutMe.value != ""){
-      replaceAboutMe(newAboutMe.value);
-    }
+    replaceName(newName.value);
+    replacePhone(newEmail.value);
+    replaceMajor(newMajor.value);
+    replaceAboutMe(newAboutMe.value);
     replaceSex(newSex.value);
     replaceSchoolYear(newSchoolYear.value);
     e.preventDefault();
@@ -45,6 +37,9 @@ window.onload = function(){
   };
   var replaceEmail = function(userInput) {
       return originalEmail.innerHTML = newEmail.value;
+  };
+  var replacePhone = function(userInput) {
+      return originalPhone.innerHTML = newPhone.value;
   };
   var replaceSex = function(userInput) {
       return originalSex.innerHTML = newSex.value;
@@ -59,8 +54,3 @@ window.onload = function(){
       return originalAboutMe.innerHTML = newAboutMe.value;
   };
 };
-
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="user_profile.css">
     <link rel="stylesheet" href="help.css">
+    <script src="user_profile.js"></script>
     <script src="user_profile_submit.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -90,7 +91,7 @@
                       </div>
                       <div class="form-group">
                         <label for="control_form">My Favorite Template</label>
-                        <p id = "user_favtemplate">Coding Template</p>
+                        <p id = "user_aboutme">Coding Template</p>
                       </div>
                     </form>
                   </div>
@@ -134,19 +135,19 @@
 
               <div id="setting" class="tab-pane fade">
                 <h3>Setting</h3>
-                <form class="needs-validation" role="form" novalidate>
+                <form data-toggle="validator" role="form">
                   <div class="form-group">
                     <label for="inputName" class="control-label">Name</label>
                     <div class="input-group">
                       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                      <input type="text" class="form-control" id="user_name_input" placeholder="Full Name" value="John Doe" required>
+                      <input type="text" class="form-control" id="user_name_input" value="John Doe" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputEmail" class="control-label">Email</label>
                     <div class="input-group">
                       <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                      <input type="email" class="form-control" id="user_email_input" placeholder="Email" value="user1@gmail.com" data-error="Email address is invalid" required>
+                      <input type="email" class="form-control" id="user_email_input" value="user1@gmail.com" data-error="Email address is invalid" required>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -186,10 +187,10 @@
                       <text for="inlineCheckbox2">Coding Template</text>
                     </div>
                   </div>
+                  <button class="popup" onclick="myFunction()" id="submitbutton" aria-label="submitbutton"> Update my profile!
+                    <span class="popuptext" id="myPopup">Updates Recorded!</span>
+                  </button>
                 </form>
-                <button class="popup" id="submitbutton" aria-label="submitbutton"> Update my profile!
-                  <span class="popuptext" id="myPopup">Updates Recorded!</span>
-                </button>
               </div>
         </div>
       </div>
