@@ -18,23 +18,24 @@
     <div class="container">
       <img class="img-circle" src="profile_pic.png" alt="empty profile picture" height=70px>
       <h2>Sign in to your account!</h2>
-      <form class="form-signin">
+      </form>
+      <form class="form-signin" action="notebooks.html">
         <div class = "input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email address" name="email" required autofocus>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email address" name="email" pattern="user1@gmail.com" required autofocus>
         </div>
         <div class = "input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password" pattern="password" required>
         </div>
         <div class="checkbox">
           <label><input type="checkbox" value="remember-me">Remember me</label>
         </div>
         <div>
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <small id="emailHelp" class="form-text text-muted">Email: user1@gmail.com | Password: password</small>
         </div>
-      <a href="notebooks.html" class="btn btn-lg btn-primary btn-block" type="submit" role="Log in to User">Log in</a>
-      <a href="notebooks.html" class="btn btn-lg btn-primary btn-block" type="submit" role="Register User">Register</button>
+      <br>
+      <input type="submit">
     </form>
   </body>
 
