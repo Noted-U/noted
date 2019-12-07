@@ -1,4 +1,3 @@
-$('#myForm').validator()
 
 window.onload = function(){
   var newName = document.getElementById('user_name_input'),
@@ -470,4 +469,4 @@ window.onload = function(){
     })
   })
 
-}(jQuery);
+}
