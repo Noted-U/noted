@@ -1,3 +1,5 @@
+#success_message{ display: none;}
+
 #logo {
   color: white;
   font-size: 20px;
@@ -67,4 +69,8 @@ emhr {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+.favtemp {
+  padding-right: 10px;
 }
