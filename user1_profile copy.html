@@ -11,10 +11,6 @@
     <script src="user_profile.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>    
-    <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
-    <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap3.min.js"></script>
-
   </head>
 
   <!-- Part of this code is from w3school. -->
@@ -41,9 +37,9 @@
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search" name="search">
                   <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit" role="Submit Search">
+                    <a href="help.html" class="btn btn-default" type="submit" role="Submit Search">
                       <i class="glyphicon glyphicon-search"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </form>
@@ -73,6 +69,10 @@
                       <div class="form-group">
                         <label for="control_form">Email address</label>
                         <p id = "user_email">user1@gmail.com</p>
+                      </div>
+                      <div class="form-group">
+                        <label for="control_form">Phone</label>
+                        <p id = "user_phone">1234567890</p>
                       </div>
                       <div class="form-group">
                         <label for="control_form">Sex</label>
@@ -134,28 +134,26 @@
                   </li>
               </div>
 
-              <div id="setting" class="tab-pane fade">
+              <div id="setting" class="tab-pane fade" aria-label="settings">
                 <h3>Setting</h3>
-                <form data-toggle="validator" role="form">
+                <br>
+                <form>
                   <div class="form-group">
-                    <label for="inputName" class="control-label">Name</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                      <input type="text" class="form-control" id="user_name_input" value="John Doe" required>
-                    </div>
+                    <label for="exampleFormControlFile1">Upload a different profile picture</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
                   </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="control-label">Email</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                      <input type="email" class="form-control" id="user_email_input" value="user1@gmail.com" data-error="Email address is invalid" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
+                  <div class="form-group" aria-label="name">
+                    <label for="control_form">Name</label>
+                    <input class="form-control" id="user_name_input" value="John Doe">
+                  </div>
+                  <div class="form-group" aria-label="email">
+                    <label for="control_form">Email address</label>
+                    <input type="email" class="form-control" id="user_email_input" aria-describedby="emailHelp" value="user1@gmail.com" required autofocus>
                   </div>
                   <div class="form-group" aria-label="sex">
                     <label for="control_form">Sex</label>
                     <select class="form-control" id="user_sex_input">
-                      <option selected="selected">Male</option>
+                      <option>Male</option>
                       <option>Female</option>
                       <option>Choose not to reply</option>
                     </select>
@@ -166,33 +164,34 @@
                       <option>Freshmen</option>
                       <option>Sophomore</option>
                       <option>Junior</option>
-                      <option selected="selected">Senior</option>
+                      <option>Senior</option>
                     </select>
                   </div>
                   <div class="form-group" aria-label="major">
                     <label for="control_form">Major</label>
-                    <textarea class="form-control" id="user_major_input" rows="1" required>Computer Science</textarea>
+                    <textarea class="form-control" id="user_major_input" rows="1"></textarea>
                   </div>
                   <div class="form-group" aria-label="aboutme">
                     <label for="control_form">About Me</label>
-                    <textarea class="form-control" id="user_aboutme_input" rows="2" required>Senior student studying CS</textarea>
+                    <textarea class="form-control" id="user_aboutme_input" rows="2"></textarea>
                   </div>
                   <div class="form-group" aria-label="favoritetemplate">
-                    <div class="form-check form-check-inline" id="user_favtemplate_input">
-                      <label for="control_form" class="favtemp">My Favorite Templates</label>
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="standard">
-                      <text for="inlineCheckbox1">Standard Template</text>
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="table">
-                      <text for="inlineCheckbox2">Table Template</text>
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="coding" checked>
-                      <text for="inlineCheckbox2">Coding Template</text>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <button id="submitbutton" type="submit" class="btn btn-primary">Submit</button>
+                    <label for="control_form">My Favorite Template</label>
+                    <select class="form-control" id="user_schoolyear_input">
+                      <option>Standard Template</option>
+                      <option>Coding Template</option>
+                      <option>Photo Template</option>
+                    </select>
                   </div>
                 </form>
-              </div>
+                <button class="btn btn-default" id="submitButton">Update my profile!
+                  <!-- <a href="user1_profile.html"></a> -->
+                </button>
+                <button class="popup" onclick="myFunction()" aria-label="submitbutton"> Update my profile!
+                  <span class="popuptext" id="myPopup">Updates Recorded!</span>
+                </button>
+
+          </div>
         </div>
       </div>
     </div>
