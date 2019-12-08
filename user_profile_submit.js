@@ -5,9 +5,6 @@ window.onload = function(){
   var newEmail = document.getElementById('user_email_input'),
       originalEmail = document.getElementById('user_email');
 
-  var newPhone = document.getElementById('user_phone_input'),
-      originalPhone = document.getElementById('user_phone');
-
   var newSex = document.getElementById('user_sex_input'),
       originalSex = document.getElementById('user_sex');
 
@@ -23,13 +20,29 @@ window.onload = function(){
   var submit = document.getElementById("submitbutton");
 
   submit.onclick = function(e){
-    replaceName(newName.value);
-    replacePhone(newEmail.value);
-    replaceMajor(newMajor.value);
-    replaceAboutMe(newAboutMe.value);
-    replaceSex(newSex.value);
-    replaceSchoolYear(newSchoolYear.value);
-    e.preventDefault();
+    if (data-error=="Email address is invalid"){
+      break;
+    }
+    else {
+      if (newName.value != ""){
+        replaceName(newName.value);
+      }
+      if (newEmail.value != ""){
+        replaceEmail(newEmail.value);
+      }
+      if (newMajor.value != ""){
+        replaceMajor(newMajor.value);
+      }
+      if (newAboutMe.value != ""){
+        replaceAboutMe(newAboutMe.value);
+      }
+      replaceSex(newSex.value);
+      replaceSchoolYear(newSchoolYear.value);
+      e.preventDefault();
+
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
   };
 
   var replaceName = function(userInput) {
@@ -37,9 +50,6 @@ window.onload = function(){
   };
   var replaceEmail = function(userInput) {
       return originalEmail.innerHTML = newEmail.value;
-  };
-  var replacePhone = function(userInput) {
-      return originalPhone.innerHTML = newPhone.value;
   };
   var replaceSex = function(userInput) {
       return originalSex.innerHTML = newSex.value;
